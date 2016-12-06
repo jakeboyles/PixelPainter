@@ -26,5 +26,10 @@
         vm.click = function (color) {
             socket.emit('vote', { color: color });
         };
+
+        // New Vote send it to server.
+        vm.clear = function (color) {
+            socket.emit('clear');
+        };
     });
 })();

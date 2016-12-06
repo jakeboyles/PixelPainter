@@ -50,4 +50,9 @@ io.on('connection', socket => {
         io.emit(id, { data: colors });
     });
 
+    socket.on('clear', data => {
+        colors = [];
+        io.emit(id, { data: colors });
+    });
+
 });
