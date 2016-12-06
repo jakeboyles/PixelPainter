@@ -7,9 +7,10 @@
 	<button ng-click="controller.click('pink')">Pink</button>
 	<button ng-click="controller.click('brown')">Brown</button>
 	<button ng-click="controller.clear()">Clear</button>
+
+	<h5>{{controller.connections}} painters</h5>
 </div>
 
-<h5>{{controller.connections}} painters</h5>
 
 
 <div ng-repeat="color in controller.data" style="background-color:{{color.color}}" class="box">
