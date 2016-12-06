@@ -1,0 +1,43 @@
+.box {
+	width:61px;
+	height:61px;
+	margin:5px;
+	float:left;
+}
+
+.colors {
+	position:absolute;
+	background-color:rgba(0,0,0,.5);
+	padding:20px;
+	bottom:0;
+}
+
+button {
+	background-color:transparent;
+	padding:10px 20px;
+	border:3px solid white;
+	border-radius:10px;
+	color:#fff;
+	margin-left:20px;
+}
+
+button:hover {
+	background-color:white;
+	color:#000;
+}
+
+.green {
+	background-color:green;
+}
+
+.orange {
+	background-color:orange;
+}
+
+.blue {
+	background-color:blue;
+}
+
+.red {
+	background-color:red;
+}

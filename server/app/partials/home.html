@@ -1,0 +1,13 @@
+
+<div class="colors">
+	<button ng-click="controller.click('red')">Red</button>
+	<button ng-click="controller.click('green')">Green</button>
+	<button ng-click="controller.click('orange')">Orange</button>
+	<button ng-click="controller.click('blue')">Blue</button>
+	<button ng-click="controller.click('pink')">Pink</button>
+	<button ng-click="controller.click('brown')">Brown</button>
+</div>
+
+
+<div ng-repeat="color in controller.data" style="background-color:{{color.color}}" class="box">
+</div>
