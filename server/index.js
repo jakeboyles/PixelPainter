@@ -36,10 +36,14 @@ server.listen(port, () => {
 })
 
 let colors = [];
+let connections = [];
 
 const id = 123;
 
 io.on('connection', socket => {
+
+    connections.push(socket);
+    io.emit('connections', { data: connections.length });
 
     socket.on('vote', data => {
         colors.push({ color: data.color })
@@ -48,6 +52,11 @@ io.on('connection', socket => {
 
     socket.on('getColors', data => {
         io.emit(id, { data: colors });
+    });
+
+    socket.on('disconnect', function () {
+      connections.splice(connections.indexOf(socket),1);
+       io.emit('connections', { data: connections.length });
     });
 
     socket.on('clear', data => {

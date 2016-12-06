@@ -22,12 +22,18 @@
             $scope.$digest();
         });
 
-        // New Vote send it to server.
+        // On a new color add it to view.
+        socket.on('connections', function (data) {
+            vm.connections = data.data;
+            $scope.$digest();
+        });
+
+        // New vote send it to server.
         vm.click = function (color) {
             socket.emit('vote', { color: color });
         };
 
-        // New Vote send it to server.
+        // Clear votes
         vm.clear = function (color) {
             socket.emit('clear');
         };
